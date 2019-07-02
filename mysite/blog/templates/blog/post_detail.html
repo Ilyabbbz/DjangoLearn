@@ -10,7 +10,19 @@
         {% if user.is_authenticated %}
             <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+        <h1 class="text-center">{{ post.title }}</h1>
+        <blockquote class="q">
+            <p>{{ post.text|linebreaksbr }}</p>
+        </blockquote>
     </div>
 {% endblock %}
+
+<!-- <div class="post">
+        <div class="date">
+            1 июля 2019 г. 18:00
+        </div>
+        <h1 class="text-center"><a href="/post/2/">two</a></h1>
+        <blockquote class="q">
+            <p>two write</p>
+        </blockquote>
+    </div> -->
