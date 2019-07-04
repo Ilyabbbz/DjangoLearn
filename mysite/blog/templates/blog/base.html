@@ -11,15 +11,13 @@
     <body>
         <div class="page-header">
             {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu" class="text-capitalize"><span class="glyphicon glyphicon-plus"></span></a>
+                <a href="{% url 'post_new' %}" class="top-menu text-capitalize"><span class="glyphicon glyphicon-plus"></span></a>
             {% endif %}
             <h1><a href="/">Django test site</a></h1>
         </div>
         <div class="content container">
             <div class="row">
-                <div class="col-xs-9"></div>
-                <div class="col-xs-4"></div>
-                <div class="col-xs-6"></div>
+                <div class="col-md-8">
                     {% block content %}
                     {% endblock %}
                 </div>
